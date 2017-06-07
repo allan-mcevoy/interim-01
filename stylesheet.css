@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fff;
+  color: #1c1c1c;
+}
+
+header {
+  padding: 10px 0px;
+  width: 100%;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  padding: 20px 0px;
+}
+
+header, footer {
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 1.15em;
+  text-align: center;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: blue;
+}
+
+
+/*--- animation ---*/
+
+section {
+  width: 50%;
+  height: 200px;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  font-family: "Times New Roman";
+  font-size: 2.5em;
+}
+
+section>.front {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  margin: auto;
+  -webkit-transform: perspective(600px) rotateY(0deg);
+  transform: perspective(800px) rotateY(0deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: -webkit-transform .5s linear 0s;
+  transition: transform .5s linear 0s;
+}
+
+section>.back {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-transform: perspective(600px) rotateY(180deg);
+  transform: perspective(800px) rotateY(180deg);
+  background-color: none;
+  width: 100%;
+  height: 200px;
+  margin: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: transform .5s linear 0s;
+  transition: transform .5s linear 0s;
+}
+
+section:hover>.front {
+  -webkit-transform: perspective(800px) rotateY(-180deg);
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+section:hover>.back {
+  -webkit-transform: perspective(800px) rotateY(0deg);
+  transform: perspective(600px) rotateY(0deg);
+}
+
+@media only screen and (max-width: 600px) {
+  header, footer {
+    font-size: 1em;
+  }
+  section {
+    font-size: 1.8em;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  header, footer {
+    font-size: 1.45em;
+  }
+  section {
+    font-size: 3.052em;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  header, footer {
+    font-size: 1.65em;
+  }
+  section {
+    font-size: 3.815em;
+  }
+}
