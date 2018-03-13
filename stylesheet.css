@@ -24,7 +24,8 @@ footer {
 header, footer {
   font-family: Arial;
   font-weight: 400;
-  font-size: 1.15em;
+  font-size: 1.3em;
+  line-height: 1.4;
   text-align: center;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
@@ -53,7 +54,7 @@ section {
   left: 0;
   top: 0;
   font-family: "Times New Roman";
-  font-size: 2.5em;
+  font-size: 2.2em;
 }
 
 section>.front {
@@ -103,7 +104,7 @@ section:hover>.back {
 
 @media only screen and (max-width: 600px) {
   header, footer {
-    font-size: 1em;
+    font-size: 1.2em;
   }
   section {
     font-size: 1.3em;
